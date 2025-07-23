@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-red: #c0392b;
+    --brand-red-dark: #a93226;
+    --brown-dark: #4a2c2a;
+    --brown-light: #8c6d69;
+    --beige-light: #f5f0e6;
+    --beige-dark: #e8e0d1;
+    --gold: #d4af37;
+
+    --background: 20 14.3% 4.1%;
+    --foreground: 20 14.3% 95.9%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 20 14.3% 95.9%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 20 14.3% 95.9%;
+    --primary: 20 14.3% 95.9%;
+    --primary-foreground: 20 5.9% 10%;
+    --secondary: 20 6% 12%;
+    --secondary-foreground: 20 14.3% 95.9%;
+    --muted: 20 6% 12%;
+    --muted-foreground: 20 9.8% 49.4%;
+    --accent: 20 6% 12%;
+    --accent-foreground: 20 14.3% 95.9%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 20 14.3% 95.9%;
+    --border: 20 6% 12%;
+    --input: 20 6% 12%;
+    --ring: 20 14.3% 95.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-beige-light text-brown-dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-24 px-4;
+  }
+
+  @media (max-width: 768px) {
+    .section-padding {
+      @apply py-16 px-4;
+    }
+  }
+
+  .btn {
+    @apply inline-block font-semibold text-center transition-all duration-300 ease-in-out rounded-lg;
+  }
+
+  .btn-primary {
+    @apply bg-brand-red text-white px-8 py-3 text-lg hover:bg-brand-red-dark hover:shadow-lg transform hover:-translate-y-1;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-brown-dark text-brown-dark px-8 py-3 text-lg hover:bg-brown-dark hover:text-white;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply transform -translate-y-2 shadow-2xl;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-select {
+    @apply w-full px-4 py-3 bg-white border-2 border-beige-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-transparent transition-all;
+  }
+
+  .form-label {
+    @apply block text-lg font-semibold mb-2 text-brown-dark;
+  }
+
+  .form-error {
+    @apply text-red-600 text-sm mt-1;
+  }
+
+  .gradient-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  .success-message {
+    @apply bg-green-100 text-green-800 p-4 rounded-lg border-l-4 border-green-500;
+  }
+
+  .newsletter-bg {
+    @apply bg-brown-dark text-beige-light;
+  }
+}
