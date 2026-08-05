@@ -11,8 +11,8 @@ const ChatWidget = () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
       toast({
-        title: "🚧 Funcionalidade em construção!",
-        description: "O chat ainda não está disponível, mas você pode solicitar essa funcionalidade no próximo prompt! 🚀",
+        title: " Funcionalidade em construção!",
+
       });
     }
   };
